@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: k8s-viewer-backend
+    volumes:
+      - ./kubeconfig:/app/kubeconfig:ro
+    ports:
+      - "8000:8000"
+    environment:
+      - TZ=Asia/Shanghai
+
+  frontend:
+    build: ./frontend
+    container_name: k8s-viewer-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - TZ=Asia/Shanghai 
