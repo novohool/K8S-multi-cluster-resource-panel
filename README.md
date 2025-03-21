@@ -75,8 +75,7 @@
 
 4. 运行后端服务：
    ```bash
-   cd app
-   uvicorn main:app --host 0.0.0.0 --port 8000
+   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
    ```
 
 #### 前端

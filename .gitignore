@@ -59,6 +59,7 @@ Thumbs.db
 kubeconfig
 *.kubeconfig
 .kube/
+user_kubeconfig/
 
 # Logs
 logs/
